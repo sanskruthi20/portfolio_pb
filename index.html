@@ -1,0 +1,1696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sanskruthi Shedole | AI & Data Science Portfolio</title>
+  <meta name="description" content="Personal e-portfolio of Sanskruthi Shedole, a 2nd-year B.Tech student in Artificial Intelligence and Data Science at Reva University. Aspiring Data Scientist and Data Analyst.">
+  <meta name="keywords" content="Sanskruthi Shedole, Reva University, Artificial Intelligence, Data Science, Data Analyst, Machine Learning, Python, SQL, Portfolio">
+  <meta name="author" content="Sanskruthi Shedole">
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Sanskruthi Shedole | AI & Data Science Portfolio">
+  <meta property="og:description" content="Aspiring Data Scientist & Data Analyst | B.Tech Artificial Intelligence and Data Science at Reva University.">
+  <meta property="og:type" content="website">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome CDN for modern tech and UI icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dark-theme">
+  <!-- Interactive Background Canvas (Neural / Data Nodes) -->
+  <canvas id="neural-canvas" aria-hidden="true"></canvas>
+
+  <!-- Notification Toast -->
+  <div id="toast" class="toast" role="alert" aria-live="polite">
+    <div class="toast-icon"><i class="fa-solid fa-circle-check"></i></div>
+    <div class="toast-message" id="toast-message">Message text here</div>
+  </div>
+
+  <!-- Top Sticky Navigation Bar -->
+  <header class="header" id="header">
+    <div class="header-container">
+      <a href="#home" class="brand-logo" aria-label="Sanskruthi Shedole Portfolio Home">
+        <span class="logo-bracket">&lt;</span>
+        <span class="logo-name">Sanskruthi</span>
+        <span class="logo-slash">/</span>
+        <span class="logo-bracket">&gt;</span>
+        <span class="logo-badge">AI &amp; DS</span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-menu" id="nav-menu" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+          <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="#education" class="nav-link">Education</a></li>
+          <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+          <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+          <li class="nav-item"><a href="#achievements" class="nav-link">Achievements</a></li>
+          <li class="nav-item"><a href="#learning" class="nav-link">Learning</a></li>
+          <li class="nav-item"><a href="#career-goals" class="nav-link">Career Goals</a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Actions: Theme Switcher & Resume & Mobile Toggle -->
+      <div class="header-actions">
+        <!-- Theme Switcher -->
+        <button id="theme-toggle" class="icon-btn" aria-label="Toggle dark/light theme" title="Toggle theme">
+          <i class="fa-solid fa-moon dark-icon"></i>
+          <i class="fa-solid fa-sun light-icon"></i>
+        </button>
+
+        <!-- Resume Button -->
+        <button id="header-resume-btn" class="btn btn-outline-sm open-resume-modal" aria-label="View or download resume">
+          <i class="fa-solid fa-file-arrow-down"></i>
+          <span>Resume</span>
+        </button>
+
+        <!-- Mobile Hamburger Toggle -->
+        <button id="menu-toggle" class="menu-toggle" aria-label="Open mobile navigation menu" aria-expanded="false" aria-controls="nav-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer Overlay -->
+  <div class="mobile-drawer-overlay" id="mobile-overlay"></div>
+
+  <!-- Main Content Landmark -->
+  <main id="main-content">
+    
+    <!-- ==================== HERO SECTION ==================== -->
+    <section id="home" class="section hero-section">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <!-- Status Pill -->
+          <div class="status-pill">
+            <span class="status-dot"></span>
+            <span>2nd Year B.Tech • Open to Internships &amp; Collaborative Projects</span>
+          </div>
+
+          <!-- Main Hero Headings -->
+          <h1 class="hero-title">
+            <span class="hero-greeting">Hi, I'm</span>
+            <span class="gradient-text hero-name">Sanskruthi Shedole</span>
+          </h1>
+
+          <h2 class="hero-subtitle">
+            <span class="highlight-degree">B.Tech – Artificial Intelligence &amp; Data Science</span>
+            <span class="separator-bullet">•</span>
+            <span class="institution-tag">Reva University</span>
+          </h2>
+
+          <p class="hero-tagline">
+            “Aspiring Data Scientist | Data Analyst | AI &amp; Data Science Enthusiast”
+          </p>
+
+          <p class="hero-summary-snippet">
+            Passionate about learning new technologies, solving real-world problems with data, and building practical algorithmic solutions.
+          </p>
+
+          <!-- Call to Action Buttons -->
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn btn-primary" id="hero-view-projects-btn">
+              <span>View My Projects</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a href="#contact" class="btn btn-secondary" id="hero-contact-me-btn">
+              <span>Contact Me</span>
+              <i class="fa-regular fa-envelope"></i>
+            </a>
+            <button class="btn btn-glass open-resume-modal" id="hero-resume-btn" aria-label="Download Resume">
+              <i class="fa-solid fa-file-pdf"></i>
+              <span>Resume</span>
+            </button>
+          </div>
+
+          <!-- Quick Social & Direct Handles (Placeholders clearly designated) -->
+          <div class="hero-social-links">
+            <span class="social-label">Connect:</span>
+            <button class="social-icon-btn placeholder-trigger" data-placeholder-type="GitHub" title="GitHub Profile [Placeholder]" aria-label="GitHub Profile">
+              <i class="fa-brands fa-github"></i>
+            </button>
+            <button class="social-icon-btn placeholder-trigger" data-placeholder-type="LinkedIn" title="LinkedIn Profile [Placeholder]" aria-label="LinkedIn Profile">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </button>
+            <button class="social-icon-btn copy-email-btn" title="Copy Email Address [Placeholder]" aria-label="Copy Email Address">
+              <i class="fa-solid fa-envelope"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Hero Visual Tech Card / Metric Dashboard -->
+        <div class="hero-visual">
+          <div class="tech-glow-circle"></div>
+          <div class="hero-avatar-card glass-card">
+            <div class="avatar-wrapper">
+              <img src="assets/sanskruthi_profile_avatar.jpg" alt="Sanskruthi Shedole - AI and Data Science Student" class="hero-avatar-img">
+              <div class="avatar-ring"></div>
+            </div>
+            
+            <div class="avatar-info">
+              <div class="avatar-name">Sanskruthi Shedole</div>
+              <div class="avatar-role">AI &amp; Data Science Undergraduate</div>
+              <div class="avatar-location"><i class="fa-solid fa-location-dot"></i> Bengaluru, India</div>
+            </div>
+
+            <div class="hero-stats-grid">
+              <div class="stat-card">
+                <div class="stat-value">2nd Year</div>
+                <div class="stat-label">3rd Semester</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-value">Reva Univ.</div>
+                <div class="stat-label">B.Tech AI &amp; DS</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-value">Python &amp; SQL</div>
+                <div class="stat-label">Core Tech Focus</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-value">SIH</div>
+                <div class="stat-label">Hackathon Tech</div>
+              </div>
+            </div>
+
+            <!-- Floating Tech Badges -->
+            <div class="floating-badge badge-top-right">
+              <i class="fa-solid fa-brain"></i>
+              <span>Machine Learning</span>
+            </div>
+            <div class="floating-badge badge-bottom-left">
+              <i class="fa-solid fa-chart-pie"></i>
+              <span>Data Analysis</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll Indicator -->
+      <a href="#about" class="scroll-indicator" aria-label="Scroll to About Section">
+        <span class="mouse-icon"><span class="wheel"></span></span>
+        <span class="scroll-text">Explore Portfolio</span>
+      </a>
+    </section>
+
+    <!-- ==================== ABOUT ME SECTION ==================== -->
+    <section id="about" class="section about-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">About Me</span>
+          <h2 class="section-title">Get to Know <span class="gradient-text">Sanskruthi</span></h2>
+          <p class="section-description">
+            Passionate problem solver, continuous learner, and aspiring data scientist building strong analytical and computational foundations.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <!-- Left Column: Key Information & Profile Card -->
+          <div class="about-profile-card glass-card">
+            <div class="card-inner-header">
+              <div class="profile-chip">
+                <span class="chip-dot"></span>
+                <span>Undergraduate Student</span>
+              </div>
+              <span class="code-tag">student.profile</span>
+            </div>
+
+            <div class="profile-details-list">
+              <div class="detail-item">
+                <div class="detail-icon"><i class="fa-solid fa-user-graduate"></i></div>
+                <div class="detail-content">
+                  <span class="detail-label">Name</span>
+                  <span class="detail-value">Sanskruthi Shedole</span>
+                </div>
+              </div>
+
+              <div class="detail-item">
+                <div class="detail-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                <div class="detail-content">
+                  <span class="detail-label">Degree</span>
+                  <span class="detail-value">B.Tech – Artificial Intelligence &amp; Data Science</span>
+                </div>
+              </div>
+
+              <div class="detail-item">
+                <div class="detail-icon"><i class="fa-solid fa-building-columns"></i></div>
+                <div class="detail-content">
+                  <span class="detail-label">University</span>
+                  <span class="detail-value">Reva University</span>
+                </div>
+              </div>
+
+              <div class="detail-item">
+                <div class="detail-icon"><i class="fa-solid fa-calendar-days"></i></div>
+                <div class="detail-content">
+                  <span class="detail-label">Academic Status</span>
+                  <span class="detail-value">2nd Year – 3rd Semester</span>
+                </div>
+              </div>
+
+              <div class="detail-item">
+                <div class="detail-icon"><i class="fa-solid fa-bullseye"></i></div>
+                <div class="detail-content">
+                  <span class="detail-label">Career Aspiration</span>
+                  <span class="detail-value">Data Scientist &bull; Data Analyst</span>
+                </div>
+              </div>
+
+              <div class="detail-item">
+                <div class="detail-icon"><i class="fa-solid fa-location-dot"></i></div>
+                <div class="detail-content">
+                  <span class="detail-label">Location</span>
+                  <span class="detail-value">Bengaluru, Karnataka, India</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Quick Action Card Footer -->
+            <div class="profile-card-action">
+              <button class="btn btn-outline-sm w-100 copy-email-btn">
+                <i class="fa-regular fa-copy"></i>
+                <span>Copy Email Placeholder</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Right Column: Professional Summary & Values -->
+          <div class="about-text-content">
+            <div class="bio-card glass-card">
+              <h3 class="bio-heading">
+                <i class="fa-solid fa-terminal"></i>
+                <span>Professional Summary</span>
+              </h3>
+              
+              <div class="bio-text">
+                <p>
+                  “Hello! I’m <strong>Sanskruthi Shedole</strong>, a B.Tech student specializing in <strong>Artificial Intelligence and Data Science</strong> at <strong>Reva University</strong>. I am passionate about learning new technologies, solving problems, and building practical solutions. I am currently strengthening my skills in programming, data analysis, SQL, and AI-related technologies while preparing myself for future opportunities in Data Science and Data Analytics.
+                </p>
+                <p>
+                  I consider myself a quick learner who enjoys adapting to new situations and taking on new challenges. I value communication, teamwork, creativity, and continuous learning.”
+                </p>
+                <p class="summary-highlight">
+                  I enjoy developing practical solutions to real-world problems and continuously improving my technical skills. I am adaptable, creative, and comfortable working both independently and as part of a team.
+                </p>
+              </div>
+
+              <!-- Key Mindset Cards -->
+              <div class="mindset-cards-grid">
+                <div class="mindset-card">
+                  <div class="mindset-icon"><i class="fa-solid fa-bolt"></i></div>
+                  <div class="mindset-title">Quick Learner</div>
+                  <div class="mindset-desc">Rapidly grasps algorithms, data workflows, and emerging frameworks.</div>
+                </div>
+
+                <div class="mindset-card">
+                  <div class="mindset-icon"><i class="fa-solid fa-puzzle-piece"></i></div>
+                  <div class="mindset-title">Problem Solver</div>
+                  <div class="mindset-desc">Dedicated to dissecting technical hurdles into practical software solutions.</div>
+                </div>
+
+                <div class="mindset-card">
+                  <div class="mindset-icon"><i class="fa-solid fa-people-group"></i></div>
+                  <div class="mindset-title">Team Player</div>
+                  <div class="mindset-desc">Thrives in collaborative hackathon environments and academic peer groups.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== EDUCATION SECTION ==================== -->
+    <section id="education" class="section education-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Academic Background</span>
+          <h2 class="section-title">Education <span class="gradient-text">Timeline</span></h2>
+          <p class="section-description">
+            Strong academic curriculum focused on Artificial Intelligence, Data Science principles, mathematics, and computing fundamentals.
+          </p>
+        </div>
+
+        <div class="education-wrapper">
+          <div class="timeline">
+            <!-- Timeline Item: B.Tech -->
+            <div class="timeline-item">
+              <div class="timeline-dot">
+                <i class="fa-solid fa-graduation-cap"></i>
+              </div>
+              <div class="timeline-content glass-card">
+                <div class="timeline-header">
+                  <div class="timeline-title-group">
+                    <span class="timeline-badge">Current Undergraduate Program</span>
+                    <h3 class="degree-title">B.Tech – Artificial Intelligence and Data Science</h3>
+                    <h4 class="university-name">Reva University, Bengaluru</h4>
+                  </div>
+                  <div class="timeline-status-badge">
+                    <i class="fa-regular fa-clock"></i>
+                    <span>2nd Year – 3rd Semester</span>
+                  </div>
+                </div>
+
+                <p class="timeline-description">
+                  Pursuing specialized engineering training combining core computer science fundamentals, statistical modeling, algorithmic problem solving, database architecture, and artificial intelligence foundations.
+                </p>
+
+                <!-- Academic Focus Modules -->
+                <div class="coursework-section">
+                  <h5 class="coursework-title">Curriculum Focus &amp; Core Subjects:</h5>
+                  <div class="course-tags">
+                    <span class="course-tag"><i class="fa-solid fa-code"></i> C Programming</span>
+                    <span class="course-tag"><i class="fa-brands fa-python"></i> Python for Data Science</span>
+                    <span class="course-tag"><i class="fa-solid fa-database"></i> Database Management (SQL)</span>
+                    <span class="course-tag"><i class="fa-solid fa-brain"></i> AI Foundations</span>
+                    <span class="course-tag"><i class="fa-solid fa-network-wired"></i> Data Structures</span>
+                    <span class="course-tag"><i class="fa-solid fa-calculator"></i> Applied Mathematics &amp; Statistics</span>
+                  </div>
+                </div>
+
+                <!-- Academic Pillars -->
+                <div class="academic-highlights-grid">
+                  <div class="academic-card">
+                    <i class="fa-solid fa-check-double text-cyan"></i>
+                    <div>
+                      <strong>Solid Algorithmic Base:</strong> Strengthening data structures and C programming for placements.
+                    </div>
+                  </div>
+                  <div class="academic-card">
+                    <i class="fa-solid fa-check-double text-cyan"></i>
+                    <div>
+                      <strong>Data-Driven Approach:</strong> Applying Python, SQL, and analytics libraries on academic datasets.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SKILLS SECTION ==================== -->
+    <section id="skills" class="section skills-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Technical Competencies</span>
+          <h2 class="section-title">Skills &amp; <span class="gradient-text">Capabilities</span></h2>
+          <p class="section-description">
+            Organized into key technical domains and interpersonal strengths. Focused on transparent, practical capabilities without arbitrary percentage ratings.
+          </p>
+        </div>
+
+        <!-- Filter Controls -->
+        <div class="skills-filter-container">
+          <button class="skill-filter-btn active" data-filter="all">All Skills</button>
+          <button class="skill-filter-btn" data-filter="programming">Programming</button>
+          <button class="skill-filter-btn" data-filter="ai-ds">Data Science &amp; AI</button>
+          <button class="skill-filter-btn" data-filter="tools">Development &amp; Tools</button>
+          <button class="skill-filter-btn" data-filter="soft">Soft Skills</button>
+        </div>
+
+        <!-- Skills Grid Categories -->
+        <div class="skills-grid">
+          
+          <!-- Category 1: Programming -->
+          <div class="skill-category-card glass-card" data-category="programming">
+            <div class="category-header">
+              <div class="cat-icon-box cat-programming">
+                <i class="fa-solid fa-code"></i>
+              </div>
+              <div>
+                <h3 class="category-title">Programming</h3>
+                <span class="category-subtitle">Core Logic &amp; Query Languages</span>
+              </div>
+            </div>
+
+            <div class="skills-list">
+              <div class="skill-item">
+                <div class="skill-head">
+                  <div class="skill-name-wrap">
+                    <i class="fa-solid fa-c text-blue"></i>
+                    <span class="skill-name">C</span>
+                  </div>
+                  <span class="skill-level-tag">Placement Prep</span>
+                </div>
+                <p class="skill-note">Syntax, memory logic, pointers, structural programming, and problem solving.</p>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-head">
+                  <div class="skill-name-wrap">
+                    <i class="fa-brands fa-python text-yellow"></i>
+                    <span class="skill-name">Python</span>
+                  </div>
+                  <span class="skill-level-tag">Core Focus</span>
+                </div>
+                <p class="skill-note">Data manipulation, scripting, automation, algorithms, and project development.</p>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-head">
+                  <div class="skill-name-wrap">
+                    <i class="fa-solid fa-database text-cyan"></i>
+                    <span class="skill-name">SQL</span>
+                  </div>
+                  <span class="skill-level-tag">Relational Data</span>
+                </div>
+                <p class="skill-note">Relational queries, table schemas, data filtering, aggregations, and joins.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 2: Data Science & AI -->
+          <div class="skill-category-card glass-card" data-category="ai-ds">
+            <div class="category-header">
+              <div class="cat-icon-box cat-aids">
+                <i class="fa-solid fa-brain"></i>
+              </div>
+              <div>
+                <h3 class="category-title">Data Science &amp; AI</h3>
+                <span class="category-subtitle">Analytics, ML &amp; Visualization</span>
+              </div>
+            </div>
+
+            <div class="skills-list">
+              <div class="skill-item">
+                <div class="skill-head">
+                  <div class="skill-name-wrap">
+                    <i class="fa-solid fa-robot text-purple"></i>
+                    <span class="skill-name">Machine Learning</span>
+                  </div>
+                  <span class="skill-level-tag">Foundations</span>
+                </div>
+                <p class="skill-note">Supervised learning concepts, classification, regression, model building principles.</p>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-head">
+                  <div class="skill-name-wrap">
+                    <i class="fa-solid fa-chart-line text-emerald"></i>
+                    <span class="skill-name">Data Analysis</span>
+                  </div>
+                  <span class="skill-level-tag">Analytical</span>
+                </div>
+                <p class="skill-note">Exploratory data analysis (EDA), trend identification, pattern recognition.</p>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-head">
+                  <div class="skill-name-wrap">
+                    <i class="fa-solid fa-table text-indigo"></i>
+                    <span class="skill-name">Pandas</span>
+                  </div>
+                  <span class="skill-level-tag">Data Wrangling</span>
+                </div>
+                <p class="skill-note">DataFrames, series manipulation, cleaning nulls, grouping, and statistical summaries.</p>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-head">
+                  <div class="skill-name-wrap">
+                    <i class="fa-solid fa-square-root-variable text-blue"></i>
+                    <span class="skill-name">NumPy</span>
+                  </div>
+                  <span class="skill-level-tag">Numerical</span>
+                </div>
+                <p class="skill-note">Multi-dimensional arrays, vector computations, and mathematical operations.</p>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-head">
+                  <div class="skill-name-wrap">
+                    <i class="fa-solid fa-chart-column text-amber"></i>
+                    <span class="skill-name">Power BI</span>
+                  </div>
+                  <span class="skill-level-tag">BI Dashboards</span>
+                </div>
+                <p class="skill-note">Interactive reports, KPI visualization, data storytelling, and chart customization.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 3: Development & Tools -->
+          <div class="skill-category-card glass-card" data-category="tools">
+            <div class="category-header">
+              <div class="cat-icon-box cat-tools">
+                <i class="fa-solid fa-screwdriver-wrench"></i>
+              </div>
+              <div>
+                <h3 class="category-title">Development &amp; Tools</h3>
+                <span class="category-subtitle">Version Control &amp; Web Stack</span>
+              </div>
+            </div>
+
+            <div class="skills-list">
+              <div class="skill-item">
+                <div class="skill-head">
+                  <div class="skill-name-wrap">
+                    <i class="fa-brands fa-git-alt text-orange"></i>
+                    <span class="skill-name">Git</span>
+                  </div>
+                  <span class="skill-level-tag">Version Control</span>
+                </div>
+                <p class="skill-note">Commit history, repository management, branch tracking, and team collaboration.</p>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-head">
+                  <div class="skill-name-wrap">
+                    <i class="fa-brands fa-github text-white"></i>
+                    <span class="skill-name">GitHub</span>
+                  </div>
+                  <span class="skill-level-tag">Hosting &amp; CI</span>
+                </div>
+                <p class="skill-note">Remote repositories, project documentation, code reviews, and project hosting.</p>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-head">
+                  <div class="skill-name-wrap">
+                    <i class="fa-brands fa-html5 text-orange"></i>
+                    <span class="skill-name">HTML</span>
+                  </div>
+                  <span class="skill-level-tag">UI Structure</span>
+                </div>
+                <p class="skill-note">Semantic HTML5 markup, web accessibility, forms, and responsive page layouts.</p>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-head">
+                  <div class="skill-name-wrap">
+                    <i class="fa-brands fa-css3-alt text-blue"></i>
+                    <span class="skill-name">CSS</span>
+                  </div>
+                  <span class="skill-level-tag">Styling</span>
+                </div>
+                <p class="skill-note">Flexbox, CSS Grid, media queries, modern UI aesthetics, and responsive design.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 4: Soft Skills -->
+          <div class="skill-category-card glass-card" data-category="soft">
+            <div class="category-header">
+              <div class="cat-icon-box cat-soft">
+                <i class="fa-solid fa-heart-pulse"></i>
+              </div>
+              <div>
+                <h3 class="category-title">Soft Skills</h3>
+                <span class="category-subtitle">Interpersonal &amp; Professional</span>
+              </div>
+            </div>
+
+            <div class="soft-skills-compact-grid">
+              <div class="soft-skill-badge">
+                <i class="fa-regular fa-comments"></i>
+                <div>
+                  <strong>Communication</strong>
+                  <span>Articulating ideas clearly</span>
+                </div>
+              </div>
+
+              <div class="soft-skill-badge">
+                <i class="fa-solid fa-users"></i>
+                <div>
+                  <strong>Teamwork</strong>
+                  <span>Collaborative synergy</span>
+                </div>
+              </div>
+
+              <div class="soft-skill-badge">
+                <i class="fa-solid fa-shuffle"></i>
+                <div>
+                  <strong>Adaptability</strong>
+                  <span>Fast response to change</span>
+                </div>
+              </div>
+
+              <div class="soft-skill-badge">
+                <i class="fa-solid fa-person-chalkboard"></i>
+                <div>
+                  <strong>Presentation</strong>
+                  <span>Technical storytelling</span>
+                </div>
+              </div>
+
+              <div class="soft-skill-badge">
+                <i class="fa-solid fa-lightbulb"></i>
+                <div>
+                  <strong>Creativity</strong>
+                  <span>Innovative approaches</span>
+                </div>
+              </div>
+
+              <div class="soft-skill-badge">
+                <i class="fa-solid fa-gears"></i>
+                <div>
+                  <strong>Problem Solving</strong>
+                  <span>Analytical breakdown</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PROJECTS SECTION ==================== -->
+    <section id="projects" class="section projects-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Hands-on Applications</span>
+          <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+          <p class="section-description">
+            Practical systems developed to solve real-world problems using sound processing, data management, and full-stack integration.
+          </p>
+        </div>
+
+        <div class="projects-grid">
+          
+          <!-- PROJECT 1: Noise Level Indicator -->
+          <article class="project-card glass-card" id="project-noise-indicator">
+            <div class="project-image-container">
+              <img src="assets/noise_level_project.jpg" alt="Noise Level Indicator System Interface" class="project-img" loading="lazy">
+              <div class="project-badge">Audio Processing &amp; Sensing</div>
+              <div class="project-overlay">
+                <button class="overlay-btn open-noise-demo" title="Try Interactive Noise Simulator">
+                  <i class="fa-solid fa-sliders"></i>
+                  <span>Test Live Simulation</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="project-number">Project 01</span>
+                <span class="project-year">Python Hardware/Software</span>
+              </div>
+
+              <h3 class="project-title">Noise Level Indicator</h3>
+              
+              <p class="project-description">
+                “Developed a Noise Level Indicator that detects surrounding sound intensity and classifies it as Quiet, Moderate, or High.”
+              </p>
+
+              <!-- Role Callout -->
+              <div class="project-role-box">
+                <div class="role-badge">
+                  <i class="fa-solid fa-user-gear"></i>
+                  <span>My Role &amp; Contribution:</span>
+                </div>
+                <p class="role-text">
+                  “Developed the noise detection logic, processed sound data, and tested the system under different conditions.”
+                </p>
+              </div>
+
+              <!-- Tech Stack Badges -->
+              <div class="tech-stack-wrap">
+                <span class="tech-tag"><i class="fa-brands fa-python"></i> Python</span>
+                <span class="tech-tag"><i class="fa-solid fa-microphone-lines"></i> Microphone / Sound Sensor</span>
+                <span class="tech-tag"><i class="fa-solid fa-wave-square"></i> Audio Processing</span>
+                <span class="tech-tag"><i class="fa-brands fa-git-alt"></i> Git</span>
+                <span class="tech-tag"><i class="fa-brands fa-github"></i> GitHub</span>
+              </div>
+
+              <!-- Action Buttons -->
+              <div class="project-card-actions">
+                <button class="btn btn-primary-sm open-noise-demo">
+                  <i class="fa-solid fa-play"></i>
+                  <span>View Project Demo</span>
+                </button>
+                <button class="btn btn-outline-sm placeholder-trigger" data-placeholder-type="GitHub Repository (Noise Level Indicator)">
+                  <i class="fa-brands fa-github"></i>
+                  <span>GitHub</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 2: Professor Availability in Campus -->
+          <article class="project-card glass-card" id="project-professor-availability">
+            <div class="project-image-container">
+              <img src="assets/professor_availability_project.jpg" alt="Professor Availability Campus System Interface" class="project-img" loading="lazy">
+              <div class="project-badge">Campus Utility &amp; Database</div>
+              <div class="project-overlay">
+                <button class="overlay-btn open-prof-demo" title="Try Professor Status Directory">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                  <span>Test Campus Directory</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="project-number">Project 02</span>
+                <span class="project-year">Python &amp; Database Web App</span>
+              </div>
+
+              <h3 class="project-title">Professor Availability in Campus</h3>
+              
+              <p class="project-description">
+                “Developed a system to help students check professor availability on campus and reduce unnecessary waiting time.”
+              </p>
+
+              <!-- Role Callout -->
+              <div class="project-role-box">
+                <div class="role-badge">
+                  <i class="fa-solid fa-user-gear"></i>
+                  <span>My Role &amp; Contribution:</span>
+                </div>
+                <p class="role-text">
+                  “Designed the availability-tracking logic, managed professor information, and developed the core functionality.”
+                </p>
+              </div>
+
+              <!-- Tech Stack Badges -->
+              <div class="tech-stack-wrap">
+                <span class="tech-tag"><i class="fa-brands fa-python"></i> Python</span>
+                <span class="tech-tag"><i class="fa-solid fa-database"></i> Database</span>
+                <span class="tech-tag"><i class="fa-brands fa-html5"></i> HTML</span>
+                <span class="tech-tag"><i class="fa-brands fa-css3-alt"></i> CSS</span>
+                <span class="tech-tag"><i class="fa-brands fa-git-alt"></i> Git</span>
+                <span class="tech-tag"><i class="fa-brands fa-github"></i> GitHub</span>
+              </div>
+
+              <!-- Action Buttons -->
+              <div class="project-card-actions">
+                <button class="btn btn-primary-sm open-prof-demo">
+                  <i class="fa-solid fa-desktop"></i>
+                  <span>View Project Demo</span>
+                </button>
+                <button class="btn btn-outline-sm placeholder-trigger" data-placeholder-type="GitHub Repository (Professor Availability)">
+                  <i class="fa-brands fa-github"></i>
+                  <span>GitHub</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== EXPERIENCE / PARTICIPATION SECTION ==================== -->
+    <section id="achievements" class="section achievements-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Extracurricular &amp; Technical Engagement</span>
+          <h2 class="section-title">Experience &amp; <span class="gradient-text">Participation</span></h2>
+          <p class="section-description">
+            Active engagement in national-level technical competitions and collaborative hackathon challenges.
+          </p>
+        </div>
+
+        <div class="experience-card glass-card">
+          <div class="experience-header">
+            <div class="sih-badge-container">
+              <div class="sih-icon-box">
+                <i class="fa-solid fa-lightbulb"></i>
+              </div>
+              <div>
+                <span class="badge-accent">National Level Technical Hackathon</span>
+                <h3 class="experience-title">Smart India Hackathon (SIH)</h3>
+                <span class="experience-role">Participant • Technical Solution Design</span>
+              </div>
+            </div>
+            <div class="experience-duration">
+              <i class="fa-regular fa-calendar-check"></i>
+              <span>National Hackathon Initiative</span>
+            </div>
+          </div>
+
+          <div class="experience-content">
+            <p class="experience-summary">
+              Participated in the prestigious <strong>Smart India Hackathon (SIH)</strong>, gaining hands-on exposure to fast-paced collaborative engineering, practical problem solving under constraints, idea development, structured presentation, and architecting technology-based solutions for real-world scenarios.
+            </p>
+
+            <div class="sih-learnings-grid">
+              <div class="learning-pillar">
+                <div class="pillar-icon"><i class="fa-solid fa-people-carry-box"></i></div>
+                <div class="pillar-content">
+                  <h4>Teamwork &amp; Collaboration</h4>
+                  <p>Coordinating ideas, delegating responsibilities, and synchronizing development within an intensive peer team environment.</p>
+                </div>
+              </div>
+
+              <div class="learning-pillar">
+                <div class="pillar-icon"><i class="fa-solid fa-brain"></i></div>
+                <div class="pillar-content">
+                  <h4>Practical Problem Solving</h4>
+                  <p>Analyzing problem statements, isolating core constraints, and designing realistic computational solutions.</p>
+                </div>
+              </div>
+
+              <div class="learning-pillar">
+                <div class="pillar-icon"><i class="fa-solid fa-diagram-project"></i></div>
+                <div class="pillar-content">
+                  <h4>Idea Development</h4>
+                  <p>Transforming high-level concepts into technical solution architectures and implementation plans.</p>
+                </div>
+              </div>
+
+              <div class="learning-pillar">
+                <div class="pillar-icon"><i class="fa-solid fa-chalkboard-user"></i></div>
+                <div class="pillar-content">
+                  <h4>Presentation Skills</h4>
+                  <p>Pitching technical methodologies and delivering structured explanations clearly to reviewers.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CURRENT LEARNING SECTION ==================== -->
+    <section id="learning" class="section learning-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Continuous Upskilling</span>
+          <h2 class="section-title">Currently <span class="gradient-text">Learning</span></h2>
+          <p class="section-description">
+            A structured learning roadmap focused on mastering core placement programming, data manipulation, and modern machine learning pipelines.
+          </p>
+        </div>
+
+        <div class="roadmap-container">
+          <div class="roadmap-track">
+            
+            <!-- Learning Track 1 -->
+            <div class="roadmap-item">
+              <div class="roadmap-marker">
+                <span class="marker-dot"></span>
+                <span class="marker-number">01</span>
+              </div>
+              <div class="roadmap-card glass-card">
+                <div class="roadmap-card-head">
+                  <div class="track-title-wrap">
+                    <i class="fa-solid fa-code text-cyan"></i>
+                    <h4>C Programming for Placements</h4>
+                  </div>
+                  <span class="roadmap-badge in-progress">Placement Priority</span>
+                </div>
+                <p>Focusing on foundational problem solving, memory management, pointers, and algorithmic logic essential for campus technical placement rounds.</p>
+                <div class="roadmap-tags">
+                  <span>Pointers</span>
+                  <span>Data Structures</span>
+                  <span>Problem Solving</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Learning Track 2 -->
+            <div class="roadmap-item">
+              <div class="roadmap-marker">
+                <span class="marker-dot"></span>
+                <span class="marker-number">02</span>
+              </div>
+              <div class="roadmap-card glass-card">
+                <div class="roadmap-card-head">
+                  <div class="track-title-wrap">
+                    <i class="fa-brands fa-python text-yellow"></i>
+                    <h4>Python</h4>
+                  </div>
+                  <span class="roadmap-badge active-study">Continuous Mastery</span>
+                </div>
+                <p>Deepening knowledge of Python object-oriented patterns, file handling, automation, scripting, and scientific modules.</p>
+                <div class="roadmap-tags">
+                  <span>OOP</span>
+                  <span>Scripting</span>
+                  <span>Automation</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Learning Track 3 -->
+            <div class="roadmap-item">
+              <div class="roadmap-marker">
+                <span class="marker-dot"></span>
+                <span class="marker-number">03</span>
+              </div>
+              <div class="roadmap-card glass-card">
+                <div class="roadmap-card-head">
+                  <div class="track-title-wrap">
+                    <i class="fa-solid fa-database text-blue"></i>
+                    <h4>SQL</h4>
+                  </div>
+                  <span class="roadmap-badge in-progress">Relational Mastery</span>
+                </div>
+                <p>Mastering complex query writing, join conditions, grouping, aggregations, window functions, and relational database schema design.</p>
+                <div class="roadmap-tags">
+                  <span>Complex Queries</span>
+                  <span>Aggregations</span>
+                  <span>Joins</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Learning Track 4 -->
+            <div class="roadmap-item">
+              <div class="roadmap-marker">
+                <span class="marker-dot"></span>
+                <span class="marker-number">04</span>
+              </div>
+              <div class="roadmap-card glass-card">
+                <div class="roadmap-card-head">
+                  <div class="track-title-wrap">
+                    <i class="fa-brands fa-git-alt text-orange"></i>
+                    <h4>Git &amp; GitHub</h4>
+                  </div>
+                  <span class="roadmap-badge active-study">Workflow &amp; Collaboration</span>
+                </div>
+                <p>Enhancing version control habits, branching strategies, resolving merge conflicts, and maintaining clean GitHub repositories.</p>
+                <div class="roadmap-tags">
+                  <span>Branching</span>
+                  <span>Pull Requests</span>
+                  <span>Documentation</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Learning Track 5 -->
+            <div class="roadmap-item">
+              <div class="roadmap-marker">
+                <span class="marker-dot"></span>
+                <span class="marker-number">05</span>
+              </div>
+              <div class="roadmap-card glass-card">
+                <div class="roadmap-card-head">
+                  <div class="track-title-wrap">
+                    <i class="fa-solid fa-chart-line text-emerald"></i>
+                    <h4>Data Analysis</h4>
+                  </div>
+                  <span class="roadmap-badge in-progress">Analytical Pipeline</span>
+                </div>
+                <p>Practicing exploratory data analysis (EDA), cleaning messy datasets, identifying patterns, and validating statistical hypotheses.</p>
+                <div class="roadmap-tags">
+                  <span>EDA</span>
+                  <span>Pandas</span>
+                  <span>NumPy</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Learning Track 6 -->
+            <div class="roadmap-item">
+              <div class="roadmap-marker">
+                <span class="marker-dot"></span>
+                <span class="marker-number">06</span>
+              </div>
+              <div class="roadmap-card glass-card">
+                <div class="roadmap-card-head">
+                  <div class="track-title-wrap">
+                    <i class="fa-solid fa-brain text-purple"></i>
+                    <h4>Machine Learning</h4>
+                  </div>
+                  <span class="roadmap-badge future-ready">Core Specialization</span>
+                </div>
+                <p>Understanding supervised and unsupervised learning algorithms, feature engineering, train-test evaluation, and model metrics.</p>
+                <div class="roadmap-tags">
+                  <span>Supervised Models</span>
+                  <span>Classification</span>
+                  <span>Model Evaluation</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Learning Track 7 -->
+            <div class="roadmap-item">
+              <div class="roadmap-marker">
+                <span class="marker-dot"></span>
+                <span class="marker-number">07</span>
+              </div>
+              <div class="roadmap-card glass-card">
+                <div class="roadmap-card-head">
+                  <div class="track-title-wrap">
+                    <i class="fa-solid fa-chart-pie text-amber"></i>
+                    <h4>Power BI</h4>
+                  </div>
+                  <span class="roadmap-badge active-study">Business Intelligence</span>
+                </div>
+                <p>Building intuitive visual reports, KPI scorecards, interactive filters, and data modeling to deliver clear business insights.</p>
+                <div class="roadmap-tags">
+                  <span>Dashboards</span>
+                  <span>DAX Basics</span>
+                  <span>Data Visuals</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CAREER GOALS SECTION ==================== -->
+    <section id="career-goals" class="section career-goals-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Aspirations &amp; Trajectory</span>
+          <h2 class="section-title">Career <span class="gradient-text">Goals</span></h2>
+          <p class="section-description">
+            Dedicated pathways designed to leverage AI, data science, and analytical thinking to create tangible real-world value.
+          </p>
+        </div>
+
+        <div class="career-quote-box glass-card">
+          <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+          <blockquote class="career-statement">
+            “My goal is to build a career in <strong>Data Science</strong> or <strong>Data Analytics</strong> where I can use programming, analytical thinking, and AI-related technologies to solve real-world problems. I want to continuously improve my technical knowledge, gain practical industry experience, and contribute to meaningful projects.”
+          </blockquote>
+          <div class="quote-author">— Sanskruthi Shedole</div>
+        </div>
+
+        <!-- Two Career Cards -->
+        <div class="career-cards-grid">
+          
+          <!-- Career Card 1: Aspiring Data Scientist -->
+          <div class="career-card glass-card">
+            <div class="career-card-top">
+              <div class="career-icon-box ds-icon">
+                <i class="fa-solid fa-atom"></i>
+              </div>
+              <span class="career-pill">Primary Aspiration</span>
+            </div>
+
+            <h3 class="career-role-title">Aspiring Data Scientist</h3>
+            <p class="career-desc">
+              Focusing on building intelligent, automated predictive systems and leveraging mathematical and machine learning techniques to tackle complex problem spaces.
+            </p>
+
+            <div class="career-focus-area">
+              <span class="focus-heading"><i class="fa-solid fa-crosshairs"></i> Core Focus Areas:</span>
+              <div class="focus-pills">
+                <span class="focus-pill"><i class="fa-solid fa-brain"></i> Machine Learning</span>
+                <span class="focus-pill"><i class="fa-solid fa-chart-line"></i> Data Analysis</span>
+                <span class="focus-pill"><i class="fa-brands fa-python"></i> Python</span>
+                <span class="focus-pill"><i class="fa-solid fa-microchip"></i> AI Fundamentals</span>
+              </div>
+            </div>
+
+            <div class="career-commitment">
+              <i class="fa-solid fa-circle-check text-cyan"></i>
+              <span>Aiming to build scalable machine learning models and data pipelines that power intelligent decisions.</span>
+            </div>
+          </div>
+
+          <!-- Career Card 2: Aspiring Data Analyst -->
+          <div class="career-card glass-card">
+            <div class="career-card-top">
+              <div class="career-icon-box da-icon">
+                <i class="fa-solid fa-chart-pie"></i>
+              </div>
+              <span class="career-pill">Primary Aspiration</span>
+            </div>
+
+            <h3 class="career-role-title">Aspiring Data Analyst</h3>
+            <p class="career-desc">
+              Focusing on querying, structuring, and transforming data into actionable executive insights, intuitive dashboards, and data-driven narratives.
+            </p>
+
+            <div class="career-focus-area">
+              <span class="focus-heading"><i class="fa-solid fa-crosshairs"></i> Core Focus Areas:</span>
+              <div class="focus-pills">
+                <span class="focus-pill"><i class="fa-solid fa-database"></i> SQL</span>
+                <span class="focus-pill"><i class="fa-brands fa-python"></i> Python</span>
+                <span class="focus-pill"><i class="fa-solid fa-table"></i> Pandas</span>
+                <span class="focus-pill"><i class="fa-solid fa-square-root-variable"></i> NumPy</span>
+                <span class="focus-pill"><i class="fa-solid fa-chart-column"></i> Power BI</span>
+                <span class="focus-pill"><i class="fa-solid fa-eye"></i> Data Visualization</span>
+              </div>
+            </div>
+
+            <div class="career-commitment">
+              <i class="fa-solid fa-circle-check text-cyan"></i>
+              <span>Committed to bridging business needs and quantitative data through clear, reliable analytical reporting.</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== STRENGTHS SECTION ==================== -->
+    <section id="strengths" class="section strengths-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Key Attributes</span>
+          <h2 class="section-title">Personal <span class="gradient-text">Strengths</span></h2>
+          <p class="section-description">
+            Core personal strengths and professional habits that guide my academic performance and collaborative technical projects.
+          </p>
+        </div>
+
+        <div class="strengths-grid">
+          
+          <!-- Strength 1 -->
+          <div class="strength-card glass-card">
+            <div class="strength-icon-box">
+              <i class="fa-solid fa-bolt"></i>
+            </div>
+            <h3 class="strength-name">Quick Learner</h3>
+            <p class="strength-desc">Rapidly comprehends novel programming concepts, mathematical algorithms, and software libraries.</p>
+          </div>
+
+          <!-- Strength 2 -->
+          <div class="strength-card glass-card">
+            <div class="strength-icon-box">
+              <i class="fa-solid fa-puzzle-piece"></i>
+            </div>
+            <h3 class="strength-name">Problem Solver</h3>
+            <p class="strength-desc">Systematically isolates edge cases and formulates clear, logical step-by-step technical solutions.</p>
+          </div>
+
+          <!-- Strength 3 -->
+          <div class="strength-card glass-card">
+            <div class="strength-icon-box">
+              <i class="fa-regular fa-comment-dots"></i>
+            </div>
+            <h3 class="strength-name">Good Communicator</h3>
+            <p class="strength-desc">Articulates technical concepts, code logic, and project progress concisely to peers and mentors.</p>
+          </div>
+
+          <!-- Strength 4 -->
+          <div class="strength-card glass-card">
+            <div class="strength-icon-box">
+              <i class="fa-solid fa-people-group"></i>
+            </div>
+            <h3 class="strength-name">Team Player</h3>
+            <p class="strength-desc">Collaborates smoothly across multidisciplinary teams, values feedback, and supports teammates.</p>
+          </div>
+
+          <!-- Strength 5 -->
+          <div class="strength-card glass-card">
+            <div class="strength-icon-box">
+              <i class="fa-solid fa-shuffle"></i>
+            </div>
+            <h3 class="strength-name">Adaptable</h3>
+            <p class="strength-desc">Flexible when navigating new development tools, evolving project requirements, and fast hackathons.</p>
+          </div>
+
+          <!-- Strength 6 -->
+          <div class="strength-card glass-card">
+            <div class="strength-icon-box">
+              <i class="fa-solid fa-lightbulb"></i>
+            </div>
+            <h3 class="strength-name">Creative Thinker</h3>
+            <p class="strength-desc">Explores unconventional angles, intuitive UI patterns, and creative ways to apply data to daily campus life.</p>
+          </div>
+
+          <!-- Strength 7 -->
+          <div class="strength-card glass-card span-last-on-wide">
+            <div class="strength-icon-box">
+              <i class="fa-solid fa-person-chalkboard"></i>
+            </div>
+            <h3 class="strength-name">Presentation Skills</h3>
+            <p class="strength-desc">Experienced in structuring clear project demonstrations, slides, and technical walkthroughs.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CONTACT SECTION ==================== -->
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Let's Connect</span>
+          <h2 class="section-title">Get in <span class="gradient-text">Touch</span></h2>
+          <p class="section-description">
+            Interested in internships, hackathon collaborations, or discussing AI and Data Science? Feel free to reach out!
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Left Column: Contact Cards & Placeholders -->
+          <div class="contact-info-panel glass-card">
+            <h3 class="contact-panel-title">
+              <i class="fa-regular fa-paper-plane text-cyan"></i>
+              <span>Contact Information</span>
+            </h3>
+            
+            <p class="contact-panel-desc">
+              I am actively seeking internship opportunities, technical mentorship, and collaborative project discussions.
+            </p>
+
+            <div class="contact-channels">
+              <!-- Email Item -->
+              <div class="contact-channel-item">
+                <div class="channel-icon"><i class="fa-regular fa-envelope"></i></div>
+                <div class="channel-details">
+                  <span class="channel-type">Email Address</span>
+                  <div class="channel-value-row">
+                    <span class="channel-value" id="displayed-email">sanskruthi.shedole@example.com</span>
+                    <button class="copy-pill-btn copy-email-btn" title="Copy email address" aria-label="Copy email address">
+                      <i class="fa-regular fa-copy"></i>
+                      <span>Copy</span>
+                    </button>
+                  </div>
+                  <span class="placeholder-tag"><i class="fa-solid fa-circle-info"></i> Placeholder – Replace with your official email</span>
+                </div>
+              </div>
+
+              <!-- LinkedIn Item -->
+              <div class="contact-channel-item">
+                <div class="channel-icon"><i class="fa-brands fa-linkedin-in"></i></div>
+                <div class="channel-details">
+                  <span class="channel-type">LinkedIn Profile</span>
+                  <div class="channel-value-row">
+                    <span class="channel-value">linkedin.com/in/sanskruthi-shedole</span>
+                    <button class="copy-pill-btn placeholder-trigger" data-placeholder-type="LinkedIn Profile">
+                      <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                      <span>Open</span>
+                    </button>
+                  </div>
+                  <span class="placeholder-tag"><i class="fa-solid fa-circle-info"></i> Placeholder – Ready to link your profile</span>
+                </div>
+              </div>
+
+              <!-- GitHub Item -->
+              <div class="contact-channel-item">
+                <div class="channel-icon"><i class="fa-brands fa-github"></i></div>
+                <div class="channel-details">
+                  <span class="channel-type">GitHub Profile</span>
+                  <div class="channel-value-row">
+                    <span class="channel-value">github.com/sanskruthi-shedole</span>
+                    <button class="copy-pill-btn placeholder-trigger" data-placeholder-type="GitHub Profile">
+                      <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                      <span>Open</span>
+                    </button>
+                  </div>
+                  <span class="placeholder-tag"><i class="fa-solid fa-circle-info"></i> Placeholder – Ready to link your repositories</span>
+                </div>
+              </div>
+
+              <!-- Location Item -->
+              <div class="contact-channel-item">
+                <div class="channel-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+                <div class="channel-details">
+                  <span class="channel-type">University &amp; Location</span>
+                  <span class="channel-value">Reva University, Bengaluru, Karnataka, India</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Resume Download Button Box -->
+            <div class="contact-resume-box">
+              <button class="btn btn-outline-sm w-100 open-resume-modal">
+                <i class="fa-solid fa-download"></i>
+                <span>Download Resume (PDF Placeholder)</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Right Column: Interactive Contact Form -->
+          <div class="contact-form-panel glass-card">
+            <h3 class="form-title">Send a Message</h3>
+            <p class="form-subtitle">Fill in your details below and I will get back to you promptly.</p>
+
+            <form id="portfolio-contact-form" class="portfolio-form" novalidate>
+              <div class="form-group">
+                <label for="form-name" class="form-label">Your Name <span class="required">*</span></label>
+                <div class="input-wrap">
+                  <i class="fa-regular fa-user input-icon"></i>
+                  <input type="text" id="form-name" name="name" class="form-input" placeholder="e.g. Dr. Ramesh / recruiter name" required>
+                </div>
+                <span class="error-msg" id="name-error">Please enter your name.</span>
+              </div>
+
+              <div class="form-group">
+                <label for="form-email" class="form-label">Your Email <span class="required">*</span></label>
+                <div class="input-wrap">
+                  <i class="fa-regular fa-envelope input-icon"></i>
+                  <input type="email" id="form-email" name="email" class="form-input" placeholder="e.g. mentor@reva.edu.in or hr@company.com" required>
+                </div>
+                <span class="error-msg" id="email-error">Please enter a valid email address.</span>
+              </div>
+
+              <div class="form-group">
+                <label for="form-subject" class="form-label">Subject</label>
+                <div class="input-wrap">
+                  <i class="fa-regular fa-bookmark input-icon"></i>
+                  <input type="text" id="form-subject" name="subject" class="form-input" placeholder="e.g. Internship Opportunity / SIH Collaboration">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="form-message" class="form-label">Message <span class="required">*</span></label>
+                <div class="input-wrap textarea-wrap">
+                  <i class="fa-regular fa-comment input-icon textarea-icon"></i>
+                  <textarea id="form-message" name="message" class="form-textarea" rows="4" placeholder="Write your message or inquiry here..." required></textarea>
+                </div>
+                <span class="error-msg" id="message-error">Please write a message before sending.</span>
+              </div>
+
+              <button type="submit" class="btn btn-primary w-100" id="submit-contact-btn">
+                <span>Send Message</span>
+                <i class="fa-solid fa-paper-plane"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#home" class="brand-logo footer-logo">
+            <span class="logo-bracket">&lt;</span>
+            <span class="logo-name">Sanskruthi</span>
+            <span class="logo-slash">/</span>
+            <span class="logo-bracket">&gt;</span>
+          </a>
+          <p class="footer-degree">B.Tech – Artificial Intelligence &amp; Data Science</p>
+          <p class="footer-motto">“Building skills. Solving problems. Learning continuously.”</p>
+        </div>
+
+        <div class="footer-nav">
+          <h4 class="footer-heading">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#achievements">Achievements</a></li>
+            <li><a href="#learning">Learning</a></li>
+            <li><a href="#career-goals">Career Goals</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-social">
+          <h4 class="footer-heading">Connect (Placeholders)</h4>
+          <div class="footer-icons">
+            <button class="footer-icon-btn placeholder-trigger" data-placeholder-type="GitHub" title="GitHub [Placeholder]" aria-label="GitHub Profile">
+              <i class="fa-brands fa-github"></i>
+            </button>
+            <button class="footer-icon-btn placeholder-trigger" data-placeholder-type="LinkedIn" title="LinkedIn [Placeholder]" aria-label="LinkedIn Profile">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </button>
+            <button class="footer-icon-btn copy-email-btn" title="Email [Placeholder]" aria-label="Copy Email">
+              <i class="fa-solid fa-envelope"></i>
+            </button>
+          </div>
+          <button class="btn btn-glass-sm open-resume-modal mt-3">
+            <i class="fa-solid fa-file-pdf"></i>
+            <span>Resume</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright-text">
+          &copy; <span id="current-year">2026</span> Sanskruthi Shedole. Created for internships, placements, hackathons, and academic portfolios.
+        </p>
+        <button id="back-to-top" class="back-to-top-btn" aria-label="Scroll back to top" title="Back to top">
+          <i class="fa-solid fa-chevron-up"></i>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== MODALS ==================== -->
+
+  <!-- Modal 1: Noise Level Indicator Interactive Simulator -->
+  <div id="noise-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="noise-modal-title">
+    <div class="modal-dialog glass-card">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <i class="fa-solid fa-wave-square text-cyan"></i>
+          <h3 id="noise-modal-title">Noise Level Indicator – Interactive Simulator</h3>
+        </div>
+        <button class="modal-close-btn" aria-label="Close modal">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <p class="modal-intro">
+          This interactive demonstration simulates the sound intensity detection and classification logic developed in Python.
+        </p>
+
+        <div class="sim-display-card">
+          <!-- Real-Time Decibel Meter -->
+          <div class="sim-meter-header">
+            <span class="sim-label">Simulated Intensity:</span>
+            <span class="sim-value-badge" id="sim-db-val">48 dB</span>
+          </div>
+
+          <!-- Dynamic Classification Indicator -->
+          <div class="classification-box" id="classification-box">
+            <span class="class-dot"></span>
+            <span class="class-text" id="class-text">MODERATE</span>
+          </div>
+
+          <!-- Visual Bar Indicator -->
+          <div class="meter-bar-container">
+            <div class="meter-bar-fill" id="meter-bar-fill" style="width: 48%;"></div>
+          </div>
+
+          <!-- Slider Control -->
+          <div class="slider-control-group">
+            <label for="noise-slider" class="slider-label">Adjust Sound Level (dB):</label>
+            <input type="range" id="noise-slider" min="10" max="110" value="48" class="sim-range-input">
+            <div class="range-labels">
+              <span>10 dB (Quiet)</span>
+              <span>55 dB (Moderate)</span>
+              <span>110 dB (High)</span>
+            </div>
+          </div>
+
+          <!-- Scenario Presets -->
+          <div class="preset-buttons-group">
+            <span class="preset-label">Test Real-World Scenarios:</span>
+            <div class="presets-row">
+              <button class="preset-btn" data-db="25"><i class="fa-solid fa-book"></i> Library (25 dB - Quiet)</button>
+              <button class="preset-btn" data-db="52"><i class="fa-solid fa-chalkboard-user"></i> Classroom (52 dB - Moderate)</button>
+              <button class="preset-btn" data-db="88"><i class="fa-solid fa-utensils"></i> Cafeteria (88 dB - High)</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="sim-code-preview">
+          <div class="code-title"><i class="fa-brands fa-python"></i> Classification Threshold Logic:</div>
+          <pre><code>if sound_intensity &lt; 40:
+    classification = "Quiet"     # Low acoustic activity
+elif 40 &lt;= sound_intensity &lt;= 70:
+    classification = "Moderate"  # Standard conversational ambient
+else:
+    classification = "High"      # Elevated noise threshold exceeded</code></pre>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-secondary modal-close-btn">Close Simulator</button>
+        <button class="btn btn-outline-sm placeholder-trigger" data-placeholder-type="GitHub (Noise Indicator)">
+          <i class="fa-brands fa-github"></i>
+          <span>GitHub Code [Placeholder]</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 2: Professor Availability Campus System Preview -->
+  <div id="prof-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="prof-modal-title">
+    <div class="modal-dialog glass-card">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <i class="fa-solid fa-building-columns text-cyan"></i>
+          <h3 id="prof-modal-title">Professor Availability in Campus – Directory Simulator</h3>
+        </div>
+        <button class="modal-close-btn" aria-label="Close modal">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <p class="modal-intro">
+          This system was designed to reduce student waiting time by providing instant query access to faculty cabin availability and lecture schedules.
+        </p>
+
+        <!-- Simulated Directory Search & Filter -->
+        <div class="directory-filter-bar">
+          <div class="search-input-box">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="prof-search-input" placeholder="Search professor name or department..." class="dir-search-field">
+          </div>
+          <select id="prof-dept-filter" class="dir-select-field">
+            <option value="all">All Departments</option>
+            <option value="ai-ds">AI &amp; Data Science</option>
+            <option value="cse">Computer Science</option>
+          </select>
+        </div>
+
+        <!-- Directory Cards List -->
+        <div class="prof-cards-list" id="prof-cards-container">
+          <!-- Card 1 -->
+          <div class="prof-card" data-dept="ai-ds" data-name="dr ananya sharma">
+            <div class="prof-avatar-icon"><i class="fa-solid fa-user-tie"></i></div>
+            <div class="prof-info">
+              <div class="prof-name">Dr. Ananya Sharma</div>
+              <div class="prof-role">Dept. of AI &amp; Data Science • Cabin #304</div>
+              <div class="prof-time">Office Hours: 10:00 AM – 1:00 PM</div>
+            </div>
+            <div class="prof-status-tag status-available">
+              <span class="status-circle"></span>
+              <span>Available in Cabin</span>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="prof-card" data-dept="cse" data-name="prof vikram mehta">
+            <div class="prof-avatar-icon"><i class="fa-solid fa-user-tie"></i></div>
+            <div class="prof-info">
+              <div class="prof-name">Prof. Vikram Mehta</div>
+              <div class="prof-role">Dept. of Computer Science • Cabin #210</div>
+              <div class="prof-time">In Lecture until 12:15 PM (Hall B)</div>
+            </div>
+            <div class="prof-status-tag status-lecture">
+              <span class="status-circle"></span>
+              <span>In Lecture</span>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="prof-card" data-dept="ai-ds" data-name="dr rajesh kumar">
+            <div class="prof-avatar-icon"><i class="fa-solid fa-user-tie"></i></div>
+            <div class="prof-info">
+              <div class="prof-name">Dr. Rajesh Kumar</div>
+              <div class="prof-role">Dept. of AI &amp; Data Science • Cabin #308</div>
+              <div class="prof-time">Expected Back at 2:00 PM</div>
+            </div>
+            <div class="prof-status-tag status-leave">
+              <span class="status-circle"></span>
+              <span>On Campus Meeting</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="sim-role-summary">
+          <i class="fa-solid fa-circle-check text-cyan"></i>
+          <span><strong>Sanskruthi's Contribution:</strong> Designed the availability-tracking logic, managed professor information in the database, and developed the core functionality.</span>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-secondary modal-close-btn">Close Directory</button>
+        <button class="btn btn-outline-sm placeholder-trigger" data-placeholder-type="GitHub (Professor Availability)">
+          <i class="fa-brands fa-github"></i>
+          <span>GitHub Code [Placeholder]</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 3: Resume Preview & Instructions Modal -->
+  <div id="resume-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="resume-modal-title">
+    <div class="modal-dialog glass-card">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <i class="fa-solid fa-file-pdf text-cyan"></i>
+          <h3 id="resume-modal-title">Sanskruthi Shedole – Resume Overview</h3>
+        </div>
+        <button class="modal-close-btn" aria-label="Close modal">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <div class="resume-preview-card">
+          <div class="resume-preview-header">
+            <h4>Sanskruthi Shedole</h4>
+            <p>B.Tech in Artificial Intelligence &amp; Data Science | Reva University (2nd Year, 3rd Sem)</p>
+          </div>
+
+          <div class="resume-quick-sections">
+            <div class="resume-sec">
+              <strong>Career Focus:</strong> Data Scientist &bull; Data Analyst
+            </div>
+            <div class="resume-sec">
+              <strong>Core Skills:</strong> C, Python, SQL, Machine Learning, Data Analysis, Pandas, NumPy, Power BI, Git, GitHub, HTML, CSS.
+            </div>
+            <div class="resume-sec">
+              <strong>Projects:</strong> Noise Level Indicator (Audio Processing) &bull; Professor Availability in Campus (Database &amp; Web).
+            </div>
+            <div class="resume-sec">
+              <strong>Participation:</strong> Smart India Hackathon (SIH) Participant.
+            </div>
+          </div>
+
+          <!-- Instruction Callout for Sanskruthi -->
+          <div class="resume-user-guide">
+            <div class="guide-title">
+              <i class="fa-solid fa-circle-info text-cyan"></i>
+              <span>Portfolio Owner Note:</span>
+            </div>
+            <p>
+              To replace this placeholder with your official PDF resume, simply save your file as <code>Sanskruthi_Shedole_Resume.pdf</code> inside the portfolio's <code>assets/</code> folder.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <a href="assets/Sanskruthi_Shedole_Resume.pdf" download="Sanskruthi_Shedole_Resume.pdf" class="btn btn-primary" id="download-resume-action-btn">
+          <i class="fa-solid fa-download"></i>
+          <span>Download Resume File (Placeholder)</span>
+        </a>
+        <button class="btn btn-secondary modal-close-btn">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 4: Generic Placeholder Info Modal -->
+  <div id="placeholder-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="placeholder-modal-title">
+    <div class="modal-dialog glass-card">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <i class="fa-solid fa-link text-cyan"></i>
+          <h3 id="placeholder-modal-title">External Link Placeholder</h3>
+        </div>
+        <button class="modal-close-btn" aria-label="Close modal">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <div class="placeholder-modal-content">
+          <div class="placeholder-icon-circle">
+            <i class="fa-solid fa-code-fork"></i>
+          </div>
+          <h4 id="placeholder-item-name">Placeholder Item</h4>
+          <p id="placeholder-explanation">
+            This link is marked as a clean placeholder so that no invented URLs or fictitious external accounts are created.
+          </p>
+          <div class="placeholder-guidance-box">
+            <span class="guide-badge">How to customize:</span>
+            <p>
+              When you're ready to add your real link, simply open <code>index.html</code> and update the <code>href</code> or <code>data-placeholder-type</code> attribute with your verified profile link.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-primary modal-close-btn">Got It</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Core JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
